@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/Link'
+
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
@@ -164,8 +166,9 @@ export default function Home() {
 
   return (
     <div>
-      <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      
+      <Box sx={{ flexGrow: 1 }} >
+      <AppBar position="static"className={styles.nav}>
         <Toolbar>
           <IconButton
             size="large"
@@ -239,42 +242,65 @@ export default function Home() {
       {renderMenu}
     </Box>
       <Carousel fade>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="holder.js/800x400?text=First slide&bg=373940"
+  <Carousel.Item >
+     <div className={styles.firstSlide}  />
+    {/*<img
+      className="d-block w-100 first-slide"
+       src="holder.js/800x400?text=First slide&bg=373940"
+      src={styles.firstSlide}
       alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
+    /> */}
+    <Carousel.Caption >
+      <h3 className={styles.slideText}>First slide label</h3>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
+    {/* <img
       className="d-block w-100"
       src="holder.js/800x400?text=Second slide&bg=282c34"
       alt="Second slide"
-    />
+    /> */}
+    <div className={styles.secondSlide}  />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
+      <h3 className={styles.slideText}>Second slide label</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
+    {/* <img
       className="d-block w-100"
       src="holder.js/800x400?text=Third slide&bg=20232a"
       alt="Third slide"
-    />
+    /> */}
+    <div className={styles.thirdSlide}  />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
+      <h1 className={styles.slideText}>Third slide label</h1>
       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+
+      <div className={styles.menuParent}>
+        <div className={styles.menu} className={styles.create}>
+          <h1>Create New Discussion</h1>
+        </div>
+        <div className={styles.menu} className={styles.own}>
+          <h1>Your Discussions</h1>
+        </div>
+        <Link href='/popular-discussions'>
+          <div className={styles.menu} className={styles.popular}>
+            <h1>Popular Discussions</h1>
+          </div>
+        </Link>
+        
+        <div className={styles.menu} className={styles.categories}>
+          <h1>Visit Categories</h1>
+        </div>
+      </div>
+      
 
     </div>
   );

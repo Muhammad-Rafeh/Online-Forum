@@ -113,9 +113,85 @@
   margin-left: 0.5rem;
 }
 
+
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+}
+
+
+.firstSlide {
+  background-image: linear-gradient(#A770EF, #CF8BF3,#FDB99B) ;
+  height: 450px;
+  width: 100vw;  
+
+}
+.secondSlide {
+  background-image: linear-gradient(#f4c4f3,#fc67fa);
+  height: 450px;
+  width: 100vw; 
+}
+.thirdSlide{
+  background-image: linear-gradient(#ef32d9,#89fffd);
+  height: 450px;
+  width: 100vw; 
+} 
+
+.color{
+  color: red;
+  background-color: #0070f3;
+  font-size: larger;
+}
+.slideText {
+  font-size: 100px;
+}
+.nav{
+  background-color: #b613d6;
+}
+
+
+.menuParent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  
+  margin:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.create,.own,.popular,.categories{
+
+  background-image: linear-gradient(#f5d5f4,#ff0ffb);
+  height: 200px;
+  width: 70vw;
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:rgb(255, 255, 255);
+  font-weight: 800;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.create{
+
+}
+.own{
+
+}
+.popular{
+
+}
+.categories{
+
 }
